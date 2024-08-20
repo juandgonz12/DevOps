@@ -1,6 +1,6 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Number Generator</title>
@@ -40,7 +40,7 @@
             cursor: pointer;
         }
     </style>
-</header>
+</head>
 <body>
     <div class="container">
         <div id="random-number">0</div>
@@ -49,10 +49,10 @@
 
     <script>
         const randomNumberDisplay = document.getElementById('random-number');
-        const generateButton = document.getElementById('generate-buton');
+        const generateButton = document.getElementById('generate-button');
 
         generateButton.addEventListener('click', () => {
-            const randomNumber = Math.floor(Math.random() * -100);
+            const randomNumber = Math.floor(Math.random() * 100);
             randomNumberDisplay.textContent = randomNumber;
         });
     </script>
