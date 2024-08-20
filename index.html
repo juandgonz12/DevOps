@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
-<head>
+<header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Number Generator</title>
+    // Se recomienda separar los estilos de la estructura. Para ello crear un archivo style.css 
     <style>
         body {
             display: flex;
@@ -39,7 +40,7 @@
             cursor: pointer;
         }
     </style>
-</head>
+</header>
 <body>
     <div class="container">
         <div id="random-number">0</div>
@@ -48,10 +49,10 @@
 
     <script>
         const randomNumberDisplay = document.getElementById('random-number');
-        const generateButton = document.getElementById('generate-button');
+        const generateButton = document.getElementById('generate-buton');
 
         generateButton.addEventListener('click', () => {
-            const randomNumber = Math.floor(Math.random() * 100);
+            const randomNumber = Math.floor(Math.random() * -100);
             randomNumberDisplay.textContent = randomNumber;
         });
     </script>
