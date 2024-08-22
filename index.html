@@ -4,54 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Number Generator</title>
-    <style>
-        /* Centering the container and applying basic styling */
-        #container {
-            text-align: center;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            max-width: 400px;
-            margin: 100px auto;
-        }
-        /* Styling for the random number display */
-        #random-number {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        /* Styling for the button */
-        button {
-            font-size: 16px;
-            padding: 10px 20px;
-            background-color: purple;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
         <div id="random-number">Random Number</div>
-        <button onclick="generateRandomNumber()">Generate Number</button>
+        <button id="generate-btn">Generate Number</button>
     </div>
 
-    <script>
-        /**
-         * Function to generate a random number and display it.
-         */
-        function generateRandomNumber() {
-            // Generate a random number between 1 and 100
-            const randomNumber = Math.floor(Math.random() * 100) + 1;
-
-            // Display the generated random number in the UI
-            document.getElementById('random-number').textContent = randomNumber;
-        }
-    </script>
+    <script src="script.js"></script>
+    <script src="test.js"></script>
 </body>
-<script src="test.js"></script>
 </html>

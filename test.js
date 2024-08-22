@@ -19,5 +19,8 @@ function testGenerateRandomNumber() {
     }
 }
 
-// Run the test
-testGenerateRandomNumber();
+// Run the test after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Optionally, you can call this function manually or automatically for testing
+    testGenerateRandomNumber();
+});
