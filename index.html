@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Number Generator API</title>
+    <title>Random Number Generator</title>
     <style>
         /* Centering the container and applying basic styling */
         #container {
@@ -15,13 +15,14 @@
             max-width: 400px;
             margin: 100px auto;
         }
-
+        /* Styling for the random number display */
         #random-number {
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
+        /* Styling for the button */
         button {
             font-size: 16px;
             padding: 10px 20px;
@@ -34,7 +35,7 @@
     </style>
 </head>
 <body>
-
+    // HTML code for the random number generator
     <div id="container">
         <div id="random-number">Random Number</div>
         <button onclick="generateRandomNumber()">Generate Number</button>
@@ -42,22 +43,14 @@
 
     <script>
         /**
-         * Function to fetch a random number from the API.
+         * Function to generate a random number and display it.
          */
-        async function generateRandomNumber() {
-            try {
-                // Calling the random number API endpoint
-                const response = await fetch('/api/random-number');
-                const data = await response.json();
+        function generateRandomNumber() {
+            // Generate a random number between 1 and 100
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
 
-                // Displaying the generated random number in the UI
-                document.getElementById('random-number').textContent = data.number;
-
-                // Changing button color for better UI/UX
-                changeButtonColor();
-            } catch (error) {
-                console.error('Error fetching random number:', error);
-            }
+            // Display the generated random number in the UI
+            document.getElementById('random-number').textContent = randomNumber;
         }
     </script>
 </body>
